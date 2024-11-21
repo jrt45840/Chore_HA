@@ -1,28 +1,88 @@
-# Chore_HA
-Chores for Home Assistant
+# Chore_HA  
+**Chores for Home Assistant**  
 
-This will add you the ability to add chores into your home assistant setup. Even though this is more of a manual install it should only take you about 15 to 20 minutes to get fully setup and ready to deploy.
+Easily manage chores and rewards for your household using Home Assistant. This integration includes features like dynamic sorting, a point-based reward system, and a parent approval workflow. While the setup process is partially manual, it should take approximately 15–20 minutes to complete.  
 
-# Features
-Dynamic sorting
+---
 
-Support up to 5 childern each having up to 99 chore and up to 20 rewards.
+## Features  
+- **Dynamic Sorting**: Automatically sorts chores based on status.  
+- **Multi-Child Support**: Manage up to **5 children**, each with up to **99 chores** and **20 rewards**.  
+- **Parent Approval System**: Parents can confirm or dismiss chores via notifications.  
 
-Parent approval system 
+---
 
-# How does it work
-Chore is Red when it needs to be done. Chore turns blue and the parents will get a notification to confim or dismiss the chore when the child complets a chore. If parent confirm the chore it turns green and the child will get points. If the parent dismiss then the chore turns back to red until the child completes it again.
-When a child get enough points they can claim a reward and the points will be deducted and the parents notified.
+## How It Works  
+1. **Chore Status**:  
+   - **Red**: The chore needs to be done.  
+   - **Blue**: The child marks the chore as completed, sending a notification to parents.  
+   - **Green**: Parents confirm the chore, awarding points to the child.  
+   - **Red (again)**: If dismissed, the chore reverts to red until the child completes it again.  
 
-# How to Install
-# Step 1
-Open studio code server and you want to create a folder called "packages" in the homeassistant directory. and then you want to create 6 new files called ("child1.yaml", "child2.yaml", "child3.yaml", "child4.yaml", "Child5.yaml", "parent.yaml"). In the homeassistant directory create a file called "dashboards.yaml"
-# Step 2
-Copy and paste from each of the files on here to home assistant
-# Step 3
-Edit the files. Open each of the Child files edit the file. It's just a matter of find and replace all.
+2. **Point System**:  
+   - Children earn points for approved chores.  
+   - Points can be redeemed for rewards, deducting the total points.  
+   - Parents are notified when a reward is claimed.  
 
-We need to change the notify.device to what we need it to be there are 5 device that can be included. Note that notify device has to be a confirmable devce to work 
-Update the timeout which is set at 15 minutes (if you accidently erase the notification it won't let you proceed, so it stops and start the script again until it gets a confirm or dismiss.)
-We will skip the update sensor.current_day_2 for now
+---
 
+## Installation  
+
+### Step 1: Create Necessary Files  
+1. Open **Studio Code Server**.  
+2. Navigate to the `homeassistant` directory and create a folder named **`packages`**.  
+3. Inside the `packages` folder, create the following files:  
+   - `child1.yaml`  
+   - `child2.yaml`  
+   - `child3.yaml`  
+   - `child4.yaml`  
+   - `child5.yaml`  
+   - `parent.yaml`  
+4. In the `homeassistant` directory, create a file named **`dashboards.yaml`**.  
+
+---
+
+### Step 2: Add File Contents  
+1. Copy the provided contents for each file (`child#.yaml`, `parent.yaml`, and `dashboards.yaml`) into the respective files you created in Step 1.  
+
+---
+
+### Step 3: Edit Child Files  
+1. Open each `child#.yaml` file and customize:  
+   - Replace **`notify.device`** with the appropriate device(s).  
+     - Up to 5 devices can be included. They must support confirmable notifications.  
+   - Adjust the **timeout** value (default is 15 minutes).  
+     - If a notification is missed or dismissed, the script will retry until confirmation or dismissal is received.  
+
+---
+
+### Step 4: Update Parent Notification Device  
+1. Open `parent.yaml` and scroll to **line 245**.  
+2. Replace **`#Edit here`** with your parent device name.  
+   - This name can be any recognizable device in your Home Assistant setup.  
+
+---
+
+### Step 5: Add Child Names  
+1. Open `dashboards.yaml`.  
+   - Replace placeholders marked **`#Edit Here`** with each child’s name.  
+2. Open each `child#.yaml` file.  
+   - Use **Find and Replace** to change all instances of **`Child #`** to the corresponding child’s name.  
+
+---
+
+### Step 6: Create a Sensor Template  
+1. Create a new helper using the following sensor template:  
+   ```yaml
+   "{{ now().strftime('%A') }}"
+   
+### Step 7: Update Sensors in Child Files
+1. Open each child#.yaml file.
+2. Replace all instances of sensor.currentday with the name of the helper you created in Step 6.
+
+### Step 8: Update Configuration
+1. Open the configuration.yaml file.
+2. Add the following lines:
+     homeassistant:
+       packages: !include_dir_named packages
+     lovelace: !include chores/dashboards.yaml

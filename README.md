@@ -109,4 +109,4 @@ Easily manage chores and rewards for your household using Home Assistant. This i
    Setup of package 'child5' failed: Integration 'views' not found.  
    Setup of package 'parent' failed: Integration 'views' not found.
 
-   This is normal the package integration doesn't allow view implemented. But the dashboards.yaml file makes up for the views
+   This is normal the package integration doesn't allow views to be implemented. But the dashboards.yaml file makes up for the views. Just ignor this warning.

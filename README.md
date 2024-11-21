@@ -75,14 +75,19 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 1. Create a new helper using the following sensor template:  
    ```yaml
    "{{ now().strftime('%A') }}"
-   
+
+---
+
 ### Step 7: Update Sensors in Child Files
 1. Open each child#.yaml file.
 2. Replace all instances of sensor.currentday with the name of the helper you created in Step 6.
 
+---
+
 ### Step 8: Update Configuration
 1. Open the configuration.yaml file.
 2. Add the following lines:
-     homeassistant:
-       packages: !include_dir_named packages
-     lovelace: !include chores/dashboards.yaml
+   ```yaml
+   homeassistant:
+     packages: !include_dir_named packages
+   lovelace: !include chores/dashboards.yaml

@@ -15,6 +15,9 @@ Chore is Red when it needs to be done. Chore turns blue and the parents will get
 When a child get enough points they can claim a reward and the points will be deducted and the parents notified.
 
 # How to Install
-  # Step 1
-  Open studio code server
+# Step 1
+Open studio code server and you want to create a folder called "packages" in the homeassistant directory. and then you want to create 6 new files called ("child1.yaml", "child2.yaml", "child3.yaml", "child4.yaml", "Child5.yaml", "parent.yaml"). In the homeassistant directory create a file called "dashboards.yaml"
+# Step 2
+Copy and paste from each of the files on here to home assistant
+
   

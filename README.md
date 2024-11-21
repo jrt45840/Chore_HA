@@ -94,7 +94,17 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 
 ---
 
-## Step 9: Restart Home Assistant
-1. Restart Home Assistant.
-2. Go to Developer Tools and check the configuration.
-  - If the check is green, your setup is ready to use
+### Step 9: Restart Home Assistant  
+1. Restart Home Assistant.  
+2. Go to **Developer Tools** and check the configuration.  
+   - If the check is green, your setup is ready to use.  
+3. If you encounter the following warning:  
+
+   ```plaintext
+   Configuration warnings  
+   Setup of package 'child1' failed: Integration 'views' not found.  
+   Setup of package 'child2' failed: Integration 'views' not found.  
+   Setup of package 'child3' failed: Integration 'views' not found.  
+   Setup of package 'child4' failed: Integration 'views' not found.  
+   Setup of package 'child5' failed: Integration 'views' not found.  
+   Setup of package 'parent' failed: Integration 'views' not found. 

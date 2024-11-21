@@ -15,5 +15,6 @@ Chore is Red when it needs to be done. Chore turns blue and the parents will get
 When a child get enough points they can claim a reward and the points will be deducted and the parents notified.
 
 # How to Install
+  # Step 1
   Open studio code server
   

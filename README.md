@@ -91,3 +91,10 @@ Easily manage chores and rewards for your household using Home Assistant. This i
    homeassistant:
      packages: !include_dir_named packages
    lovelace: !include chores/dashboards.yaml
+
+---
+
+## Step 9: Restart Home Assistant
+1. Restart Home Assistant.
+2. Go to Developer Tools and check the configuration.
+  - If the check is green, your setup is ready to use

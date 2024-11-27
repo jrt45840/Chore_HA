@@ -23,11 +23,11 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 ### Step 2: Install 
 1. Default install
    - Default child names (`Child 1`, `Child 2`, `Child 3`, ect)
-      - Just copy every in the directory 'Default Child' into `Home Assistant`.
+      - Just copy every in the directory `Default Child` into `Home Assistant`.
       - go to **step 3**.
 2. Custom install
    - Custom child names
-      - Open directory `Custom Name` and download the `ChoreHaAssistant.zip` extract the zip file and `Chore HA Assistant.exe`.
+      - Open directory `Custom Name` and download the `ChoreHaAssistant.zip` extract the zip file and run `Chore HA Assistant.exe`.
       - Follow the directions in the program to continue.
 
 ---

@@ -10,36 +10,15 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 - **Multi-Child Support**: Manage up to **5 children**, each with up to **99 chores** and **20 rewards**.  
 - **Parent Approval System**: Parents can confirm or dismiss chores via notifications.  
 
----
-
-## How It Works  
-1. **Chore Status**:  
-   - **Red**: The chore needs to be done.  
-   - **Blue**: The child marks the chore as completed, sending a notification to parents.  
-   - **Green**: Parents confirm the chore, awarding points to the child.  
-   - **Red (again)**: If dismissed, the chore reverts to red until the child completes it again.  
-
-2. **Point System**:  
-   - Children earn points for approved chores.  
-   - Points can be redeemed for rewards, deducting the total points.  
-   - Parents are notified when a reward is claimed.  
-
----
 
 ## Installation  
 
-### Step 1: Create Necessary Files  
-1. Open **Studio Code Server**.  
-2. Navigate to the `homeassistant` directory and create a folder named **`packages`**.  
-3. Inside the `packages` folder, create the following files:  
-   - `child1.yaml`  
-   - `child2.yaml`  
-   - `child3.yaml`  
-   - `child4.yaml`  
-   - `child5.yaml`  
-   - `parent.yaml`  
-4. In the `homeassistant` directory, create a file named **`dashboards.yaml`**.  
-
+### Step 1: Install the prerequirements
+**Hacs**
+With hacs install these cards
+- `Button Card`
+- `layout-card`
+- `fold-entity-row`
 ---
 
 ### Step 2: Add File Contents  

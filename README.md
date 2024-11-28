@@ -16,7 +16,6 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 ### Step 1: Install the prerequirements
 **Hacs** with these cards
 - `Button Card`
-- `layout-card`
 - `fold-entity-row`
 ---
 

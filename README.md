@@ -51,7 +51,7 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 
 ---
 
-### Step 7: Restart Home Assistant  
+### Step 6: Restart Home Assistant  
 1. Restart Home Assistant.  
 2. Go to **Developer Tools** and check the configuration.  
    - If the check is green, your setup is ready to use.  

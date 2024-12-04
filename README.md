@@ -17,16 +17,13 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 **Hacs** with these cards
 - `Button Card`
 - `fold-entity-row`
+- `custom layout card` 
 ---
 
 ### Step 2: Install 
 1. Default install
    - Default child names (`Child 1`, `Child 2`, `Child 3`, ect)
-      - Just copy every in the directory `Default Child` into `Home Assistant`.
-2. Custom install
-   - Custom child names
-      - Open directory `Custom Name` and download the `ChoreHaAssistant.zip` extract the zip file and run `Chore HA Assistant.exe`.
-      - Follow the directions in the program to continue
+      - Just copy every in the directory `Default Child` into `Home Assistant` directory exept for helpers goes in to the package Folder.
 
 ---
 
@@ -44,13 +41,7 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 
 ---
 
-### Step 5: Update Sensors in Child Files
-1. Open each `child#.yaml` file.
-2. Replace all instances of sensor.currentday with the name of the helper you created in Step 4.
-
----
-
-### Step 6: Update Configuration
+### Step 5: Update Configuration
 1. Open the `configuration.yaml` file.
 2. Add the following lines:
    ```yaml

@@ -5,11 +5,11 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 
 ---
 
-## Features  
-- **Dynamic Sorting**: Automatically sorts chores based on status.  
-- **Multi-Child Support**: Easily be able to add as may users that suit your needs.  
-- **Parent Approval System**: Parents can confirm or dismiss chores via notifications.  
-- **Custom Colors for each state**
+## Features 
+- **Multi-User Support**: Easily be able to add as may users that suit your needs.  
+- **Parent Approval System**: Parents can confirm, dismiss or bypass via notifications.  
+- **Custom Colors for each state**:
   - **Chores States**: `Disabled`, `Ready`, `pending`, `completed`
-
+- **Custom Icons for each state**: Each state has it's own icon. Icons can be either MDI (Meterial Design icons), or an http image link.
+- 
 

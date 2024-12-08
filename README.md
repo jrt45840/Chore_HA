@@ -11,5 +11,10 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 - **Custom Colors for each state**:
   - **Chores States**: `Disabled`, `Ready`, `pending`, `completed`
 - **Custom Icons for each state**: Each state has it's own icon. Icons can be either MDI (Material Design icons https://pictogrammers.com/library/mdi/ ), or an http image link.
-- 
+- **Reward Claiming**: Claiming a reward can be a text or it can be used to unlock a device. (only boolean entities as of now)
 
+---
+
+Donations: Buy me a cup of coffee or a monstaer energy drink.
+Venmo @jerryrt1985
+cashapp $jerryrt1985

@@ -10,6 +10,6 @@ Easily manage chores and rewards for your household using Home Assistant. This i
 - **Parent Approval System**: Parents can confirm, dismiss or bypass via notifications.  
 - **Custom Colors for each state**:
   - **Chores States**: `Disabled`, `Ready`, `pending`, `completed`
-- **Custom Icons for each state**: Each state has it's own icon. Icons can be either MDI (Meterial Design icons), or an http image link.
+- **Custom Icons for each state**: Each state has it's own icon. Icons can be either MDI (Material Design icons https://pictogrammers.com/library/mdi/ ), or an http image link.
 - 
 
